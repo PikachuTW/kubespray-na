@@ -5,12 +5,14 @@
 calico_cni_name: k8s-pod-network
 
 calico_node_cpu_request: "100m"
-calico_node_cpu_limit: "500m"
-calico_node_memory_request: "64Mi"
-calico_node_memory_limit: "512Mi"
+calico_node_cpu_limit: "250m"
+calico_node_memory_request: "100Mi"
+calico_node_memory_limit: "200Mi"
 
-calico_kube_controllers_cpu_request: "100m"
-calico_kube_controllers_memory_request: "64Mi"
+calico_kube_controllers_cpu_request: "50m"
+calico_kube_controllers_cpu_limit: "100m"
+calico_kube_controllers_memory_request: "50Mi"
+calico_kube_controllers_memory_limit: "100Mi"
 
 ## With calico it is possible to distributed routes with border routers of the datacenter.
 ## Warning : enabling router peering will disable calico's default behavior ('node mesh').
